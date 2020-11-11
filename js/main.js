@@ -38,7 +38,7 @@ while(n < arr2.length) {
 var arr3 = new Array();
 
 for(var i = 0; i < 50; i++) {
-    arr3.push(Number(generate(1, 50)));
+    arr3.push(generate(1, 50));
 }
 
 // Array with numbers that can't be divided by 3
