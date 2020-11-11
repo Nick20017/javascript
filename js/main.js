@@ -54,8 +54,8 @@ for(num in arr3) {
         arr3_1.push(num);
 }
 
-arr3_1.sort(function(a, b) { a - b});
-arr3_2.sort(function(a, b) { a - b});
+arr3_1.sort(function(a, b) { a - b });
+arr3_2.sort(function(a, b) { a - b });
 
 arr3_1.reverse();
 
