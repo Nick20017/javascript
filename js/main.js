@@ -38,7 +38,7 @@ while(n < arr2.length) {
 var arr3 = new Array();
 
 for(var i = 0; i < 50; i++) {
-    arr3.push(generate(1, 50));
+    arr3.push(Number(generate(1, 50)));
 }
 
 // Array with numbers that can't be divided by 3
@@ -54,8 +54,8 @@ for(num in arr3) {
         arr3_1.push(num);
 }
 
-arr3_1.sort(function(a, b) { a - b });
-arr3_2.sort(function(a, b) { a - b });
+arr3_1.sort(function(a, b) { a - b});
+arr3_2.sort(function(a, b) { a - b});
 
 arr3_1.reverse();
 
@@ -65,6 +65,29 @@ arr3 = arr3_1.concat(arr3_2);
 var arr4 = new Array("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday");
 
 arr4.unshift(arr4.pop());
+
+// Task 5
+function partition(n, limit, str = "") {
+    var arr = new Array();
+
+    var partitionResultString = '';
+    var i;
+    if (n > 0) {
+        var k = Math.min(n, limit);
+        for (i = k; i > 0; i--)
+            partition (n-i, i, str + '+' + i);
+    }
+    else {
+        partitionResultString += str + '\n';
+    }
+
+    document.getElementById('task5').innerHTML += partitionResultString;
+    return partitionResultString;
+}
+
+document.getElementById('task5').innerHTML += partition(7, 14);
+console.log(partition(7, 14));
+
 
 var content = new Vue({
     el: '#content',
